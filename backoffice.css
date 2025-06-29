@@ -1,0 +1,136 @@
+
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #f9f9f9;
+  --accent-color: #2c3e50;
+  --hover-color: #66bb6a;
+  --text-color: #333;
+  --background-color: #f4f7fc;
+  --header-bg: linear-gradient(to right, #2c3e50, #4CAF50);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('backround.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    animation: fadeInBody 1s ease-in;
+}
+
+header {
+  background: var(--header-bg);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  animation: slideDown 0.5s ease-out;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--hover-color);
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.8s ease;
+}
+
+button, input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+ul li, table {
+  transition: transform 0.3s ease;
+}
+
+ul li:hover, tr:hover {
+  transform: scale(1.01);
+  background-color: #f0f8f0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        .container { max-width: 500px; margin: 50px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        h1, h2 { text-align: center; color: #555; }
+        form { margin-top: 20px; }
+        form label { display: block; margin-bottom: 5px; font-weight: bold; }
+        form input, form select, form button { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        form button { background-color: #4caf50; color: white; font-size: 16px; cursor: pointer; }
+        form button:hover { background-color: #45a049; }
+        .error, .success { color: red; font-weight: bold; margin-bottom: 15px; }
+        .success { color: green; }
+        .logout { text-align: center; margin-top: 20px; }
+        .logout a { color: #333; text-decoration: none; font-weight: bold; }
+        .logout a:hover { text-decoration: underline; }
+        .competence-list { margin-top: 20px; }
+        .competence-list table { width: 100%; border-collapse: collapse; }
+        .competence-list th, .competence-list td { padding: 8px 12px; border: 1px solid #ddd; text-align: left; }
+        .competence-list th { background-color: #f4f4f4; }
+        .competence-list .actions button { margin-right: 5px; }
+        .navigation { text-align: center; margin-top: 20px; }
+        .navigation a { font-weight: bold; color: #4caf50; text-decoration: none; margin-right: 20px; }
+        .navigation a:hover { text-decoration: underline; }
+
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  animation: fadeIn 0.8s ease-out;
+}
+
+header, .container, table, form {
+  animation: fadeIn 1s ease-out;
+  animation-fill-mode: both;
+}
+
+a:hover, button:hover {
+  transition: 0.3s ease;
+  transform: scale(1.03);
+  cursor: pointer;
+}
